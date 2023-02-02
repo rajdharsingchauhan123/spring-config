@@ -4,16 +4,20 @@ import java.util.Scanner;
 
 public class Demo1 {
     public static void main(String[] args) {
-        int a = 12;
-        int b = 15;
+       Scanner scanner =new Scanner(System.in );
 
+        System.out.println("enter a two number");
 
-        if (a < b) {
-            System.out.println("print a in less than b" + a);
-        } else {
+        Integer a = scanner.nextInt();
+        Integer b= scanner.nextInt();
 
-
-            System.out.println("other wise b is greaet" + b);
+        if(a<b){
+            System.out.println(a);
         }
+        else {
+            System.out.println(b);
+        }
+
+
     }
 }
