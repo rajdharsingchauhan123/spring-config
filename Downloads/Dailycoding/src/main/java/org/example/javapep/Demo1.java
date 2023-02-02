@@ -3,7 +3,7 @@ package org.example.javapep;
 import java.util.Scanner;
 
 public class Demo1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) {1
        Scanner scanner =new Scanner(System.in );
 
         System.out.println("enter a two number");
@@ -11,12 +11,9 @@ public class Demo1 {
         Integer a = scanner.nextInt();
         Integer b= scanner.nextInt();
 
-        if(a<b){
-            System.out.println(a);
-        }
-        else {
-            System.out.println(b);
-        }
+//
+        int result=(a<b)?a:b;
+        System.out.println(result);
 
 
     }
