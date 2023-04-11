@@ -1,8 +1,8 @@
 package org.example.leetcode;
 
-import java.io.Serializable;
+import java.io.*;
 
-public class Employee implements Serializable {
+public class Employee implements Externalizable {
 
     private static final long serialVersionUID=1L;
     private int id ;
@@ -23,5 +23,17 @@ public class Employee implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public void writeExternal(ObjectOutput objectOutput) throws IOException {
+        objectOutput.writeInt(id);
+
+    }
+
+    @Override
+    public void readExternal(ObjectInput objectInput) throws IOException, ClassNotFoundException {
+        id=objectInput.readInt();
+
     }
 }
